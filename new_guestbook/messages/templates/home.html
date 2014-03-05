@@ -1,0 +1,16 @@
+<body>
+    <form>
+        <input type="text" name="author" placeholder="Автор">
+        <br>
+        <textarea name="text"></textarea>
+        <input type="submit">
+
+        {% for message in messages %}
+        <div class="message">
+            <span class="author">{{ message.author }}</span>
+            <span class="text">{{ message.text }}</span>
+        </div>
+        {% endfor %}
+
+    </form>
+</body>
